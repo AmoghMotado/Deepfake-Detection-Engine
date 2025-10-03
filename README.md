@@ -1,14 +1,50 @@
-# DFDetect – Image & Video Deepfake Detection (with FastAPI Web UI)
+Deepfake Detection (with Web UI)
+📖 Project Overview
 
-A full-stack project for detecting **deepfake images and videos**:
+Deepfake Detection Engine leverages deep learning to classify images and videos as AI-generated (fake) or authentic (real).
+The project combines a TensorFlow/Keras-based detection model with a FastAPI-powered full-stack web application, enabling end-to-end workflows — from training and testing models to user-friendly real-time inference.
 
-- 🧠 **Keras / TensorFlow** classifier for faces (MobileNetV2-based)
-- 🎞️ **Video logic:** frame-sampling → face-crop → per-frame scores → **Top-K mean** aggregation → final video score
-- 📈 **Evaluation:** ROC/AUC + automatic **threshold calibration**
-- 🌐 **FastAPI Web-App:** Google OAuth Login, MongoDB storage (users + predictions)  
-  Dashboard has **4 actions:** **Upload Photo • Upload Video • Compare Photos • Compare Videos**
+Deepfakes pose growing risks in areas like misinformation, cyber-security, and online identity theft. DFDetect helps identify manipulated media to enhance digital trust and security.
 
----
+✨ Key Features
+
+🔍 Deepfake Detection for Images – Classifies single images as “Original” or “AI-Generated”.
+
+🎥 Deepfake Detection for Videos – Extracts frames → crops faces → scores per-frame → aggregates results with Top-K Mean logic for robust predictions.
+
+📈 Unified Training Pipeline – Train models for both images and videos with YAML-based configurations.
+
+📊 Metrics & Evaluation – Provides ROC, AUC, Accuracy, and calibrated thresholds for reliable decision-making.
+
+🌐 Interactive Web Dashboard – User-friendly interface built with FastAPI + Jinja2 Templates.
+
+🔐 Authentication – Supports standard Login/Signup and Google OAuth 2.0.
+
+💾 MongoDB Integration – Stores user profiles and prediction history (images/videos).
+
+📤 Media Upload & Compare – Upload and test individual images/videos, or compare two media files side-by-side.
+
+⚡ Real-Time Inference – Drag-and-drop uploads with immediate classification and smooth progress animations.
+
+💻 GPU-Ready – Optimized for faster model training and inference when using supported NVIDIA GPUs.
+
+🚀 Tech Stack
+
+Deep Learning: TensorFlow / Keras, OpenCV, NumPy
+
+Backend: FastAPI, Pydantic, Uvicorn
+
+Frontend: Jinja2 Templates, HTML5, CSS3, JS
+
+Database: MongoDB (Motor async driver)
+
+Authentication: OAuth 2.0 (Authlib), Session Middleware
+
+Deployment-Ready: Uvicorn / Gunicorn compatible
+
+Visualization & Metrics: Matplotlib, scikit-image
+
+Environment Management: Python venv, dotenv
 
 ## 1. Pre-requisites
 
