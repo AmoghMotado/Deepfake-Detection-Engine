@@ -1,0 +1,113 @@
+# -------------------------------
+# Python cache & build files
+# -------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# -------------------------------
+# Virtual environments
+# -------------------------------
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+*.env.local
+
+# -------------------------------
+# Environment & secrets
+# -------------------------------
+.env
+*.secret
+*.key
+*.pem
+*.crt
+
+# -------------------------------
+# Dataset folders
+# (These are usually too large to push to git)
+# -------------------------------
+data/images/
+data/videos/
+test_images/
+tmp/
+temp/
+uploads/
+
+# -------------------------------
+# Model weights, checkpoints & logs
+# -------------------------------
+runs/
+*.h5
+*.hdf5
+*.keras
+*.ckpt
+*.pb
+*.onnx
+*.tflite
+*.pth
+*.log
+events.out.tfevents.*
+
+# -------------------------------
+# Jupyter notebooks checkpoints
+# -------------------------------
+.ipynb_checkpoints/
+
+# -------------------------------
+# IDE / Editor configs
+# -------------------------------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# -------------------------------
+# FastAPI / Web temporary files
+# -------------------------------
+webapp/__pycache__/
+webapp/static/uploads/
+webapp/static/temp/
+
+# -------------------------------
+# OS-specific files
+# -------------------------------
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# -------------------------------
+# Logs / temp debug files
+# -------------------------------
+*.log
+*.bak
+*.tmp
+*.pid
+*.dat
+
+# -------------------------------
+# Compiled output or cache
+# -------------------------------
+.cache/
+.mypy_cache/
+.pytest_cache/
+coverage/
+htmlcov/
+.tox/
+.nox/
+profiler-output/

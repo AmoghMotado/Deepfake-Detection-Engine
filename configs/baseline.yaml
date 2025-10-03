@@ -1,0 +1,15 @@
+seed: 42
+image_size: 160
+batch_size: 16     # if RAM tight or you see OOM, drop to 8
+epochs: 12
+train_dir: data/images/train
+val_dir: data/images/val
+model: mobilenet_v2
+augment:
+  blur: true
+  jpeg: true
+  noise: true
+thresholding:
+  strategy: youden
+  maximize: auc
+save_dir: runs/images_baseline

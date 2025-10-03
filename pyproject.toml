@@ -1,0 +1,27 @@
+[project]
+name = "dfdetect"
+version = "0.1.0"
+description = "Deepfake detection for images and videos with FastAPI web frontend"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "jinja2>=3.1",
+  "python-multipart>=0.0.9",
+  "pydantic>=2.7",
+  "motor>=3.5",
+  "pymongo>=4.7",
+  "opencv-python>=4.8",
+  "numpy>=1.23",
+  "scikit-image>=0.21",
+  "pillow>=10.0",
+  "tensorflow>=2.15",
+  "tqdm>=4.66",
+  "authlib>=1.3",
+  "python-dotenv>=1.0",
+  "pandas>=2.2",
+  "matplotlib>=3.7"
+]
+
+[tool.setuptools]
+packages = ["dfdetect"]

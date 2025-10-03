@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script defer src="/static/js/app.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div>Welcome, {{ user['name'] if user and 'name' in user else user['email'] }}</div>
+      <a href="/logout">Logout</a>
+    </nav>
+    <main class="grid">
+      <a class="card" href="#" onclick="showPanel('photo')">Upload Photo</a>
+      <a class="card" href="#" onclick="showPanel('video')">Upload Video</a>
+      <a class="card" href="#" onclick="showPanel('comparePhotos')">Compare Photos</a>
+      <a class="card" href="#" onclick="showPanel('compareVideos')">Compare Videos</a>
+    </main>
+
+    <section id="panel-photo" class="panel hidden">
+      <h2>Upload Photo</h2>
+      <input type="file" id="photoFile">
+      <button onclick="predictImage()">Analyze</button>
+      <div class="progress hidden" id="photoProgress"></div>
+      <pre id="photoResult"></pre>
+    </section>
+
+    <section id="panel-video" class="panel hidden">
+      <h2>Upload Video</h2>
+      <input type="file" id="videoFile">
+      <button onclick="predictVideo()">Analyze</button>
+      <div class="progress hidden" id="videoProgress"></div>
+      <pre id="videoResult"></pre>
+    </section>
+
+    <section id="panel-comparePhotos" class="panel hidden">
+      <h2>Compare Photos</h2>
+      <input type="file" id="photo1"><input type="file" id="photo2">
+      <button onclick="compareImages()">Compare</button>
+      <div class="progress hidden" id="cpProgress"></div>
+      <pre id="cpResult"></pre>
+    </section>
+
+    <section id="panel-compareVideos" class="panel hidden">
+      <h2>Compare Videos</h2>
+      <input type="file" id="video1"><input type="file" id="video2">
+      <button onclick="compareVideos()">Compare</button>
+      <div class="progress hidden" id="cvProgress"></div>
+      <pre id="cvResult"></pre>
+    </section>
+  </body>
+</html>

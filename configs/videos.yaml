@@ -1,0 +1,15 @@
+seed: 42
+image_size: 160
+batch_size: 8       # drop to 4 if needed
+epochs: 6
+frames_per_video: 12
+frame_strategy: uniform
+train_dir: data/videos/train
+val_dir: data/videos/val
+model: mobilenet_v2
+face_detection:
+  enabled: true
+  min_conf: 0.5
+aggregation: topk_mean
+topk: 0.3
+save_dir: runs/videos_baseline
